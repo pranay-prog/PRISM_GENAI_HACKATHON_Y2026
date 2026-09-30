@@ -1,0 +1,5 @@
+mode,scenario,answer_versions,citation_coverage,citation_validity,decision_accuracy,final_answer_latency_s,first_answer_latency_s,first_retrieval_latency_s,gold_evidence_recall,gold_intent_answered,intent_f1,intent_precision,intent_recall,refinement_correct,retrieval_calls,sections_carried_over,sections_regenerated,total_retrieval_ms,unnecessary_retrievals
+refine-targeted,outage_wifi_compensation,4,1.0,1.0,1.0,0.0063,0.8084,0.805,1.0,1.0,1.0,1.0,1.0,1,6,1,2,19.71,0
+refine-targeted,vpn_mfa_finance,4,1.0,1.0,1.0,0.005,0.9077,0.9046,1.0,1.0,1.0,1.0,1.0,1,6,3,3,17.07,1
+refine-restart,outage_wifi_compensation,4,1.0,1.0,1.0,0.0064,0.8085,0.8053,1.0,1.0,1.0,1.0,1.0,1,7,0,3,27.52,1
+refine-restart,vpn_mfa_finance,4,1.0,1.0,1.0,0.0117,0.9077,0.9044,1.0,1.0,1.0,1.0,1.0,1,9,0,6,34.55,4

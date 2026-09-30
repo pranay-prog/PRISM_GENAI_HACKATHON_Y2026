@@ -1,0 +1,56 @@
+[
+  {
+    "document_id": "BIZ-001",
+    "title": "Business VPN Service Overview",
+    "category": "business",
+    "subcategory": "vpn",
+    "version": "2026.1",
+    "section": "vpn_overview",
+    "content": "The Business VPN service gives employees of business customers secure remote access to internal company applications such as dashboards, file shares, and the business portal. Users connect with the VPN client using their company single sign-on (SSO) account.\n\nA connected VPN only provides a network path to the company network. Each internal application still performs its own sign-in and access checks, so a user can be connected to the VPN and still be refused access to an application."
+  },
+  {
+    "document_id": "BIZ-002",
+    "title": "VPN Connected but Applications Unreachable",
+    "category": "business",
+    "subcategory": "vpn",
+    "version": "2026.1",
+    "section": "vpn_connected_no_access",
+    "content": "If the VPN client shows Connected but a company dashboard or application does not load, first confirm whether the page fails to load at all or shows a sign-in or access error. A page that never loads usually indicates a DNS or routing issue: disconnect and reconnect the VPN so the client reapplies the company DNS settings, and confirm the user is on the full-tunnel profile if the application is not in the split-tunnel list.\n\nIf the page loads but shows a sign-in failure or an MFA error, the VPN is working correctly and the problem is with authentication or application permissions. Troubleshoot the MFA error code and then check the user's access rights for that application."
+  },
+  {
+    "document_id": "BIZ-003",
+    "title": "Business SSO and MFA Errors",
+    "category": "business",
+    "subcategory": "mfa",
+    "version": "2026.1",
+    "section": "sso_mfa",
+    "content": "Company applications behind the Business VPN use single sign-on with mandatory multi-factor authentication. MFA errors during SSO use the same codes as the customer account: MFA-401 for an expired code or clock drift, MFA-403 for an unregistered device, and MFA-429 for too many failed attempts.\n\nSign-ins from a new location, such as a home network, may trigger an additional MFA challenge. If the user recently replaced their phone, the authenticator must be re-registered by the company IT administrator before sign-in will succeed. Help desk agents cannot bypass MFA for any user."
+  },
+  {
+    "document_id": "BIZ-004",
+    "title": "Role-Based Access to Business Dashboards",
+    "category": "business",
+    "subcategory": "access_control",
+    "version": "2026.2",
+    "section": "dashboard_access",
+    "content": "Access to company dashboards is role-based. Being able to sign in does not grant access to every dashboard; each dashboard is linked to one or more roles, and the user must hold the matching role. An Access denied page after a successful sign-in means the user does not hold the required role.\n\nThe finance dashboard is restricted to the Finance Viewer and Finance Analyst roles. Requests for finance dashboard access must be submitted through the access request portal and require approval from the user's line manager and from the finance data owner. Approved requests are usually applied within two working days.\n\nFor finance roles, access is only permitted from company-managed devices with MFA; sign-ins from personal devices are blocked even when the VPN is connected."
+  },
+  {
+    "document_id": "BIZ-005",
+    "title": "Remote Access from Home Networks",
+    "category": "business",
+    "subcategory": "remote_access",
+    "version": "2026.1",
+    "section": "home_network_access",
+    "content": "Employees working from home connect to the Business VPN over their home broadband. The home router must allow VPN traffic on UDP ports 500 and 4500; the supported Hub 4 and Hub 5 routers allow this by default. Some third-party routers require VPN passthrough to be enabled.\n\nIf the VPN disconnects repeatedly from a home network, check the stability of the home broadband connection first. Public or hotel Wi-Fi networks with captive portals must be signed in to before the VPN can connect."
+  },
+  {
+    "document_id": "BIZ-006",
+    "title": "Access Request Approval Workflow",
+    "category": "business",
+    "subcategory": "access_control",
+    "version": "2026.1",
+    "section": "access_request",
+    "content": "To request access to an application or dashboard, the user opens the access request portal, selects the application and role, and gives a business justification. The request is routed to the line manager first and then to the application or data owner.\n\nThe user receives an email at each approval step. Rejected requests include the reason for rejection. Urgent access can be requested by the line manager through the IT service desk, but it still requires data owner approval for restricted data such as finance and payroll."
+  }
+]

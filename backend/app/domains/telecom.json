@@ -1,0 +1,806 @@
+{
+ "domain": "telecom_support",
+ "description": "Telecom / broadband customer support with a business IT access extension. Swap this file to re-target the engine to another domain.",
+ "correction_markers": [
+  "\\bactually\\b",
+  "\\bturns out\\b",
+  "\\bi mean\\b",
+  "\\bcorrection\\b",
+  "\\bnot \\w+ but\\b",
+  "\\bwait,?\\b",
+  "\\bsorry,?\\b"
+ ],
+ "presentation_patterns": [
+  "\\bsummari[sz]e\\b",
+  "\\bsummary\\b",
+  "\\bshorter\\b",
+  "\\bshorten\\b",
+  "\\bcondense\\b",
+  "\\bbullet",
+  "\\bin (one|two|three|four|five|\\d+) (points|sentences|lines)\\b",
+  "\\bsimpler\\b",
+  "\\bmore simply\\b",
+  "\\bin simple (terms|words)\\b",
+  "\\brephrase\\b",
+  "\\breword\\b",
+  "\\breformat\\b",
+  "\\btl;?dr\\b"
+ ],
+ "previous_answer_refs": [
+  "\\bprevious answer\\b",
+  "\\bthat answer\\b",
+  "\\bsame answer\\b",
+  "\\bthe answer\\b",
+  "\\bthat\\b",
+  "\\bit\\b",
+  "\\bthis\\b"
+ ],
+ "facts": [
+  {
+   "key": "issue",
+   "value": "internet_down",
+   "patterns": [
+    "\\binternet (is |was )?(not|isn'?t|is not) working\\b",
+    "\\bno internet\\b",
+    "\\binternet (is )?down\\b",
+    "\\bcan'?t get online\\b",
+    "\\binternet stopped\\b"
+   ]
+  },
+  {
+   "key": "router_signal",
+   "value": "red_los",
+   "patterns": [
+    "\\blos\\b",
+    "\\bloss of signal\\b"
+   ]
+  },
+  {
+   "key": "router_signal",
+   "value": "red_light",
+   "patterns": [
+    "\\bred light\\b(?!.*\\blos\\b)"
+   ]
+  },
+  {
+   "key": "device",
+   "value": "phone",
+   "patterns": [
+    "\\bphone\\b",
+    "\\bmobile\\b(?! data)"
+   ]
+  },
+  {
+   "key": "device",
+   "value": "laptop",
+   "patterns": [
+    "\\blaptop\\b",
+    "\\bcomputer\\b"
+   ]
+  },
+  {
+   "key": "failure_scope",
+   "value": "all_devices",
+   "patterns": [
+    "\\b(phone|laptop|tablet|tv|computer) (also|too) (can'?t|cannot|won'?t|doesn'?t) connect",
+    "\\balso (can'?t|cannot) connect\\b",
+    "\\bnothing (can )?connects?\\b",
+    "\\ball (my |the )?devices\\b"
+   ]
+  },
+  {
+   "key": "failure_scope",
+   "value": "wifi_only",
+   "patterns": [
+    "\\bonly (the )?wi-?fi\\b",
+    "\\bjust (the )?wi-?fi\\b",
+    "\\bwi-?fi only\\b"
+   ]
+  },
+  {
+   "key": "mobile_data_working",
+   "value": true,
+   "patterns": [
+    "\\bmobile data (works|is working|working|is fine|is ok)\\b",
+    "\\b4g works\\b",
+    "\\b5g works\\b"
+   ]
+  },
+  {
+   "key": "wifi_affected",
+   "value": true,
+   "patterns": [
+    "\\bwi-?fi (doesn'?t|isn'?t|is not|does not|won'?t|not)\\b",
+    "\\bconnect to (the )?wi-?fi\\b",
+    "\\bonly (the )?wi-?fi\\b"
+   ]
+  },
+  {
+   "key": "location",
+   "value": "home",
+   "patterns": [
+    "\\b(at|from) home\\b",
+    "\\bhome network\\b"
+   ]
+  },
+  {
+   "key": "work_context",
+   "value": "remote_work",
+   "patterns": [
+    "\\bwork(ing)? from home\\b",
+    "\\bwfh\\b",
+    "\\bremote(ly)? work"
+   ]
+  },
+  {
+   "key": "vpn_status",
+   "value": "connected",
+   "patterns": [
+    "\\bvpn (is |shows )?connected\\b",
+    "\\bconnected to (the )?vpn\\b"
+   ]
+  },
+  {
+   "key": "auth_error",
+   "value": "mfa_error",
+   "patterns": [
+    "\\bmfa\\b",
+    "\\b2fa\\b",
+    "\\bverification code\\b",
+    "\\bauthenticator\\b"
+   ]
+  },
+  {
+   "key": "target_resource",
+   "value": "company_dashboard",
+   "patterns": [
+    "\\bcompany dashboard\\b",
+    "\\binternal dashboard\\b"
+   ]
+  },
+  {
+   "key": "target_resource",
+   "value": "finance_dashboard",
+   "patterns": [
+    "\\bfinance dashboard\\b",
+    "\\bfinance (app|system|reports?)\\b"
+   ]
+  },
+  {
+   "key": "speed_issue",
+   "value": "slow",
+   "patterns": [
+    "\\bslow\\b",
+    "\\bbuffering\\b",
+    "\\blow speeds?\\b"
+   ]
+  }
+ ],
+ "fact_terms": {
+  "router_signal": {
+   "red_los": "red LOS loss of signal light ONT",
+   "red_light": "red light router"
+  },
+  "failure_scope": {
+   "all_devices": "all devices no internet",
+   "wifi_only": "only wifi fails mobile data works home wifi"
+  },
+  "mobile_data_working": {
+   "true": "mobile data works cellular independent of home broadband"
+  },
+  "device": {
+   "phone": "phone",
+   "laptop": "laptop"
+  },
+  "location": {
+   "home": "home network"
+  },
+  "work_context": {
+   "remote_work": "working from home remote access home broadband"
+  },
+  "vpn_status": {
+   "connected": "VPN connected"
+  },
+  "auth_error": {
+   "mfa_error": "MFA error"
+  },
+  "target_resource": {
+   "company_dashboard": "company dashboard",
+   "finance_dashboard": "finance dashboard role access approval"
+  }
+ },
+ "intents": [
+  {
+   "label": "connectivity_outage",
+   "display": "Connectivity and outage diagnosis",
+   "triggers": [
+    [
+     "\\binternet (is |was )?(not|isn'?t|is not) working\\b",
+     0.6
+    ],
+    [
+     "\\bno internet\\b",
+     0.6
+    ],
+    [
+     "\\binternet (is )?down\\b",
+     0.6
+    ],
+    [
+     "\\bcan'?t get online\\b",
+     0.6
+    ],
+    [
+     "\\boutage\\b",
+     0.3
+    ],
+    [
+     "\\boffline\\b",
+     0.4
+    ]
+   ],
+   "slots": [
+    "issue",
+    "router_signal"
+   ],
+   "depends_on": [
+    "mobile_data_working"
+   ],
+   "base_query": "internet not working first checks outage status",
+   "fact_terms": {
+    "mobile_data_working": {
+     "true": "mobile data works independent of home broadband check router ONT lights"
+    },
+    "router_signal": {
+     "red_los": "red LOS light outage status",
+     "red_light": "red light"
+    }
+   }
+  },
+  {
+   "label": "router_indicator",
+   "display": "Router and ONT light diagnosis",
+   "triggers": [
+    [
+     "\\blos\\b",
+     0.9
+    ],
+    [
+     "\\bloss of signal\\b",
+     0.9
+    ],
+    [
+     "\\bred light\\b",
+     0.7
+    ],
+    [
+     "\\brouter lights?\\b",
+     0.5
+    ],
+    [
+     "\\bblinking\\b",
+     0.3
+    ]
+   ],
+   "slots": [
+    "router_signal"
+   ],
+   "depends_on": [],
+   "base_query": "ONT router status light troubleshooting fiber",
+   "fact_terms": {}
+  },
+  {
+   "label": "wifi_connectivity",
+   "display": "Wi-Fi and device connection",
+   "triggers": [
+    [
+     "\\bwi-?fi\\b",
+     0.5
+    ],
+    [
+     "\\b(phone|laptop|tablet|device|tv|computer)\\b.{0,20}\\b(can'?t|cannot|won'?t|doesn'?t|not) connect",
+     0.7
+    ],
+    [
+     "\\bcan'?t connect\\b",
+     0.3
+    ],
+    [
+     "\\bwireless\\b",
+     0.5
+    ]
+   ],
+   "slots": [
+    "device",
+    "failure_scope"
+   ],
+   "depends_on": [
+    "failure_scope",
+    "mobile_data_working"
+   ],
+   "base_query": "device cannot connect wifi troubleshooting"
+  },
+  {
+   "label": "outage_compensation",
+   "display": "Outage compensation policy",
+   "triggers": [
+    [
+     "\\bcompensat",
+     0.9
+    ],
+    [
+     "\\brefund\\b",
+     0.8
+    ],
+    [
+     "\\bservice credits?\\b",
+     0.8
+    ],
+    [
+     "\\bmoney back\\b",
+     0.7
+    ],
+    [
+     "\\bsla\\b",
+     0.5
+    ]
+   ],
+   "slots": [],
+   "depends_on": [
+    "failure_scope"
+   ],
+   "base_query": "outage compensation eligibility total loss of service 24 hours service credit",
+   "fact_terms": {
+    "failure_scope": {
+     "wifi_only": "exclusions home wifi",
+     "all_devices": "network fault"
+    }
+   }
+  },
+  {
+   "label": "remote_work_support",
+   "display": "Remote work support",
+   "triggers": [
+    [
+     "\\bwork(ing)? from home\\b",
+     0.8
+    ],
+    [
+     "\\bwfh\\b",
+     0.8
+    ],
+    [
+     "\\bremote(ly)? work",
+     0.8
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "requires_any_fact": [
+    "issue",
+    "router_signal",
+    "failure_scope"
+   ],
+   "base_query": "remote work support programme priority working from home outage"
+  },
+  {
+   "label": "slow_speed",
+   "display": "Slow speed",
+   "triggers": [
+    [
+     "\\bslow\\b",
+     0.7
+    ],
+    [
+     "\\bbuffering\\b",
+     0.6
+    ],
+    [
+     "\\bspeeds?\\b",
+     0.4
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "slow speed troubleshooting wired speed test"
+  },
+  {
+   "label": "intermittent_connectivity",
+   "display": "Intermittent connection",
+   "triggers": [
+    [
+     "\\b(keeps|kept) (dropping|disconnecting)\\b",
+     0.8
+    ],
+    [
+     "\\bdrops? out\\b",
+     0.7
+    ],
+    [
+     "\\bintermittent\\b",
+     0.8
+    ],
+    [
+     "\\bon and off\\b",
+     0.6
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "intermittent connectivity dropouts troubleshooting"
+  },
+  {
+   "label": "dns_issue",
+   "display": "DNS / websites not loading",
+   "triggers": [
+    [
+     "\\bdns\\b",
+     0.9
+    ],
+    [
+     "\\bserver address could not be found\\b",
+     0.8
+    ],
+    [
+     "\\bsome websites\\b",
+     0.5
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "DNS resolution problems websites not loading"
+  },
+  {
+   "label": "vpn_access",
+   "display": "VPN connectivity",
+   "triggers": [
+    [
+     "\\bvpn\\b",
+     0.8
+    ]
+   ],
+   "slots": [
+    "vpn_status"
+   ],
+   "depends_on": [
+    "location",
+    "work_context"
+   ],
+   "base_query": "VPN connected but applications unreachable",
+   "fact_terms": {
+    "location": {
+     "home": "home network"
+    },
+    "work_context": {
+     "remote_work": "working from home remote access home broadband new location"
+    }
+   }
+  },
+  {
+   "label": "mfa_error",
+   "display": "MFA / authentication error",
+   "triggers": [
+    [
+     "\\bmfa\\b",
+     0.9
+    ],
+    [
+     "\\b2fa\\b",
+     0.9
+    ],
+    [
+     "\\bverification code\\b",
+     0.6
+    ],
+    [
+     "\\bauthenticator\\b",
+     0.6
+    ],
+    [
+     "\\bauthentication (error|failed|failure)\\b",
+     0.8
+    ]
+   ],
+   "slots": [
+    "auth_error"
+   ],
+   "depends_on": [
+    "location",
+    "work_context"
+   ],
+   "base_query": "MFA error codes sign in authentication",
+   "fact_terms": {
+    "location": {
+     "home": "home network"
+    },
+    "work_context": {
+     "remote_work": "working from home remote access home broadband new location"
+    }
+   }
+  },
+  {
+   "label": "application_access",
+   "display": "Application / dashboard access",
+   "triggers": [
+    [
+     "\\b(can'?t|cannot|unable to) access\\b",
+     0.5
+    ],
+    [
+     "\\bdashboard\\b",
+     0.5
+    ],
+    [
+     "\\baccess denied\\b",
+     0.8
+    ],
+    [
+     "\\bpermissions?\\b",
+     0.6
+    ],
+    [
+     "\\bneed access\\b",
+     0.6
+    ]
+   ],
+   "slots": [
+    "target_resource"
+   ],
+   "depends_on": [
+    "target_resource"
+   ],
+   "base_query": "access to business dashboard role-based access"
+  },
+  {
+   "label": "account_login",
+   "display": "Customer account sign-in",
+   "triggers": [
+    [
+     "\\bpassword\\b",
+     0.7
+    ],
+    [
+     "\\b(can'?t|cannot) (log|sign) ?in\\b",
+     0.8
+    ],
+    [
+     "\\blocked out\\b",
+     0.8
+    ],
+    [
+     "\\baccount (is )?locked\\b",
+     0.8
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "customer account sign in password reset locked account"
+  },
+  {
+   "label": "billing",
+   "display": "Billing and payments",
+   "triggers": [
+    [
+     "\\bbill(ing|ed)?\\b",
+     0.7
+    ],
+    [
+     "\\binvoice\\b",
+     0.7
+    ],
+    [
+     "\\bpayment\\b",
+     0.6
+    ],
+    [
+     "\\bcharged?\\b",
+     0.5
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "billing cycle invoice payment"
+  },
+  {
+   "label": "plan_change",
+   "display": "Plan change",
+   "triggers": [
+    [
+     "\\bupgrade\\b",
+     0.8
+    ],
+    [
+     "\\bdowngrade\\b",
+     0.8
+    ],
+    [
+     "\\bchange (my )?plan\\b",
+     0.8
+    ],
+    [
+     "\\bfaster plan\\b",
+     0.7
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "change plan upgrade downgrade"
+  },
+  {
+   "label": "cancellation",
+   "display": "Cancellation",
+   "triggers": [
+    [
+     "\\bcancel",
+     0.9
+    ],
+    [
+     "\\bterminate (my )?contract\\b",
+     0.8
+    ],
+    [
+     "\\bleave (the|your) (service|company)\\b",
+     0.6
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "cancel plan notice early termination charge"
+  },
+  {
+   "label": "technician_visit",
+   "display": "Technician visit",
+   "triggers": [
+    [
+     "\\btechnician\\b",
+     0.9
+    ],
+    [
+     "\\bengineer\\b",
+     0.8
+    ],
+    [
+     "\\bsend someone\\b",
+     0.7
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "technician visit booking"
+  },
+  {
+   "label": "restoration_time",
+   "display": "Restoration time",
+   "triggers": [
+    [
+     "\\bhow long\\b",
+     0.5
+    ],
+    [
+     "\\bwhen will (it|the internet|service) be (back|fixed|restored)\\b",
+     0.9
+    ],
+    [
+     "\\brestor",
+     0.7
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "estimated restoration time outage"
+  },
+  {
+   "label": "support_hours",
+   "display": "Support hours",
+   "triggers": [
+    [
+     "\\bsupport hours\\b",
+     0.9
+    ],
+    [
+     "\\bopening hours\\b",
+     0.8
+    ],
+    [
+     "\\bwhen (is|are) (support|you) open\\b",
+     0.9
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "support hours contact channels"
+  },
+  {
+   "label": "escalation",
+   "display": "Complaint escalation",
+   "triggers": [
+    [
+     "\\bescalat",
+     0.8
+    ],
+    [
+     "\\bcomplain",
+     0.8
+    ],
+    [
+     "\\bombudsman\\b",
+     0.9
+    ],
+    [
+     "\\bmanager\\b",
+     0.4
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "complaint escalation policy"
+  },
+  {
+   "label": "router_setup",
+   "display": "Router setup",
+   "triggers": [
+    [
+     "\\bset ?up (my |the |a )?(new )?router\\b",
+     0.9
+    ],
+    [
+     "\\binstall (my |the |a )?router\\b",
+     0.8
+    ],
+    [
+     "\\bown router\\b",
+     0.8
+    ],
+    [
+     "\\bthird[- ]party router\\b",
+     0.9
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "router setup supported routers"
+  },
+  {
+   "label": "device_capacity",
+   "display": "Connected device capacity",
+   "triggers": [
+    [
+     "\\bhow many devices\\b",
+     0.9
+    ],
+    [
+     "\\bmaximum (number of )?devices\\b",
+     0.9
+    ],
+    [
+     "\\btoo many devices\\b",
+     0.8
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "maximum connected devices router"
+  },
+  {
+   "label": "home_move",
+   "display": "Moving house",
+   "triggers": [
+    [
+     "\\bmoving (house|home)\\b",
+     0.9
+    ],
+    [
+     "\\bnew address\\b",
+     0.7
+    ],
+    [
+     "\\bmove house\\b",
+     0.9
+    ]
+   ],
+   "slots": [],
+   "depends_on": [],
+   "base_query": "moving house service transfer"
+  }
+ ]
+}

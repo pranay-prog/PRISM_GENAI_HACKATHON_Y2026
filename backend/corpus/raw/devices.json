@@ -1,0 +1,83 @@
+[
+  {
+    "document_id": "DEV-001",
+    "title": "Router Setup",
+    "category": "devices",
+    "subcategory": "router",
+    "version": "2026.1",
+    "section": "router_setup",
+    "content": "To set up the router, connect the WAN port (marked in blue) to the LAN port of the ONT using the supplied network cable, then connect the power adapter. The router starts in about two minutes. When the Internet light turns solid green, the connection is ready.\n\nThe default Wi-Fi network name, Wi-Fi password, and admin password are printed on the label on the base of the router. Customers should change the admin password on first login to the router settings page at 192.168.1.1."
+  },
+  {
+    "document_id": "DEV-002",
+    "title": "ONT Installation and Setup",
+    "category": "devices",
+    "subcategory": "ont",
+    "version": "2026.1",
+    "section": "ont_setup",
+    "content": "The ONT is installed by a technician during the first fiber installation and must remain powered on at all times. It should be mounted on a wall near a power socket and must not be moved by the customer, because moving it can damage the fiber cable.\n\nAfter power is connected, the ONT registers with the network automatically. The PON light blinks during registration and becomes solid green within three minutes. If the ONT shows a red LOS light after installation, the fiber link has not been established and the installation ticket must be reopened."
+  },
+  {
+    "document_id": "DEV-003",
+    "title": "Supported Router Types",
+    "category": "devices",
+    "subcategory": "router",
+    "version": "2026.1",
+    "section": "supported_routers",
+    "content": "The supported routers are the Hub 5 (Wi-Fi 6) supplied with all current fiber plans and the Hub 4 (Wi-Fi 5) supplied with plans activated before 2024. Both routers can be managed remotely by support agents, which allows remote diagnostics, event logs, and firmware updates.\n\nCustomers may use their own third-party router connected to the ONT. The router must support PPPoE with VLAN tagging on VLAN 10. Support for third-party routers is limited to confirming that the ONT and line are working; agents cannot configure or diagnose customer-owned routers."
+  },
+  {
+    "document_id": "DEV-004",
+    "title": "Device Compatibility",
+    "category": "devices",
+    "subcategory": "compatibility",
+    "version": "2026.1",
+    "section": "compatibility",
+    "content": "The Hub 5 router is compatible with any device that supports Wi-Fi 4 (802.11n) or later, including phones, laptops, tablets, smart TVs, games consoles, and smart home devices. Devices that support only 802.11b or 802.11g may connect at reduced speed or fail to connect when the router is in Wi-Fi 6 only mode.\n\nWPA3 security is enabled with WPA2 compatibility by default. Some older devices cannot join a network that uses WPA3; switching the router security mode to WPA2 resolves this."
+  },
+  {
+    "document_id": "DEV-005",
+    "title": "Maximum Connected Devices",
+    "category": "devices",
+    "subcategory": "capacity",
+    "version": "2026.1",
+    "section": "max_devices",
+    "content": "The Hub 5 supports up to 128 simultaneously connected devices and the Hub 4 supports up to 64. In practice, performance depends on how much bandwidth each device uses rather than on the number of devices.\n\nFor homes with more than 30 active devices, heavy video streaming, or many smart home devices, we recommend using the 5 GHz band for high-bandwidth devices and adding mesh extenders to spread the load."
+  },
+  {
+    "document_id": "DEV-006",
+    "title": "Ethernet vs Wi-Fi Troubleshooting",
+    "category": "devices",
+    "subcategory": "ethernet",
+    "version": "2026.1",
+    "section": "ethernet_vs_wifi",
+    "content": "Testing with an Ethernet cable is the fastest way to separate a Wi-Fi problem from a line problem. Connect a laptop directly to one of the yellow LAN ports on the router. If the internet works over Ethernet but not over Wi-Fi, the broadband line is healthy and troubleshooting should focus on Wi-Fi settings, placement, and interference.\n\nIf the internet fails over both Ethernet and Wi-Fi, the problem is on the broadband line, the ONT, or the network. Check the ONT lights, including the LOS light, and the outage status before booking any visit."
+  },
+  {
+    "document_id": "DEV-007",
+    "title": "Router Factory Reset",
+    "category": "devices",
+    "subcategory": "router",
+    "version": "2026.1",
+    "section": "factory_reset",
+    "content": "A factory reset returns the router to its default settings, including the default Wi-Fi name and password printed on the label. All custom settings, such as port forwarding and changed Wi-Fi passwords, are lost. To reset, hold the recessed reset button for 15 seconds while the router is powered on.\n\nOnly recommend a factory reset when the Internet light is orange after a normal restart or when the customer has lost access to the settings page. A factory reset does not fix a red LOS light or an area outage."
+  },
+  {
+    "document_id": "DEV-008",
+    "title": "Router Firmware Updates",
+    "category": "devices",
+    "subcategory": "router",
+    "version": "2026.1",
+    "section": "firmware",
+    "content": "Firmware for supported routers is updated automatically between 02:00 and 05:00 when a new version is released. The router restarts once during the update and the connection is interrupted for about five minutes.\n\nAgents can check the installed firmware version remotely. If a router is more than two versions behind, trigger a remote update, because older firmware versions have known Wi-Fi stability issues."
+  },
+  {
+    "document_id": "DEV-009",
+    "title": "Mesh Wi-Fi Extenders",
+    "category": "devices",
+    "subcategory": "mesh",
+    "version": "2026.1",
+    "section": "mesh",
+    "content": "Mesh extenders improve Wi-Fi coverage in larger homes by creating a single network across several units. The first extender should be placed halfway between the router and the area with weak coverage, not inside the weak area itself.\n\nExtenders can be added to any plan for a monthly rental fee, and one extender is included with Premium plans. Extenders do not help when the internet connection itself is down, for example when the ONT shows a red LOS light."
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "document_id": "POL-001",
+    "title": "Outage Compensation Policy",
+    "category": "policies",
+    "subcategory": "compensation",
+    "version": "2026.1",
+    "section": "compensation_eligibility",
+    "content": "Residential customers are eligible for outage compensation when a network fault causes a total loss of broadband service for more than 24 consecutive hours. Outages shorter than 24 hours are not compensated. Eligibility is based on the fault duration recorded on the master outage ticket or on the customer's fault ticket.\n\nCompensation is paid as a service credit equal to one thirtieth of the monthly plan price for each full day without service, starting from the time the fault was reported or the outage was confirmed. For confirmed area outages the credit is applied automatically; customers do not need to claim it.\n\nFor single-premises faults, such as a red LOS light caused by a line fault at one address, the customer must have an open fault ticket for the downtime to be counted. Customers who did not report the fault can claim within 30 days of restoration by contacting support."
+  },
+  {
+    "document_id": "POL-002",
+    "title": "Residential Service Level Agreement",
+    "category": "policies",
+    "subcategory": "sla",
+    "version": "2026.1",
+    "section": "residential_sla",
+    "content": "Under the residential SLA, we aim to restore service after a line fault within two working days of the fault being reported. Faults affecting shared network equipment in a confirmed area outage are worked on continuously until service is restored.\n\nIf a line fault is not fixed within the SLA, the customer receives a service credit for each additional day in addition to any outage compensation. Repeated failures to meet the SLA within 12 months give the customer the right to cancel without an early termination charge."
+  },
+  {
+    "document_id": "POL-003",
+    "title": "How Service Credits Are Applied",
+    "category": "policies",
+    "subcategory": "service_credits",
+    "version": "2026.1",
+    "section": "service_credits",
+    "content": "Service credits are applied to the next bill after approval and are shown as a separate line item. Credits cannot be exchanged for cash unless the account is closed with a remaining credit balance.\n\nThe total service credit for any one month cannot exceed the monthly plan price. Customers can see pending and applied credits in the Billing section of the online account."
+  },
+  {
+    "document_id": "POL-004",
+    "title": "Remote Work Support Programme",
+    "category": "policies",
+    "subcategory": "remote_work",
+    "version": "2026.1",
+    "section": "remote_work",
+    "content": "Customers who work from home can register for the Remote Work Support Programme in the online account at no extra cost. Registered remote workers receive priority fault handling (priority level P2) and a technician visit within one working day for confirmed line faults.\n\nDuring a confirmed outage or line fault, registered remote workers can request a temporary 50 GB mobile data boost on their mobile plan, or a loan 4G/5G hotspot delivered the next working day, to continue working. The programme does not change compensation eligibility; outage compensation follows the standard outage compensation policy.\n\nCustomers who are not yet registered can register during a support call, and priority handling applies from the moment of registration."
+  },
+  {
+    "document_id": "POL-005",
+    "title": "Escalation Policy",
+    "category": "policies",
+    "subcategory": "escalation",
+    "version": "2026.1",
+    "section": "escalation_policy",
+    "content": "A customer complaint can be escalated to a team leader when the customer is not satisfied with the resolution offered, when a fault ticket has missed its target time, or when the customer has contacted support three or more times about the same issue.\n\nIf the complaint is not resolved within eight weeks, or the customer receives a final response they disagree with, they can refer the complaint to the independent telecoms ombudsman free of charge."
+  },
+  {
+    "document_id": "POL-006",
+    "title": "Exclusions from Outage Compensation",
+    "category": "policies",
+    "subcategory": "compensation",
+    "version": "2026.1",
+    "section": "compensation_exclusions",
+    "content": "Outage compensation is not paid for interruptions caused by planned maintenance notified at least 48 hours in advance, faults with customer-owned equipment or third-party routers, damage caused by the customer or by building work at the property, or events outside our reasonable control such as severe weather declared as an emergency by authorities.\n\nCompensation is also not paid for problems limited to the home Wi-Fi network when the broadband line itself is working, because the service was available over a wired connection. Missed technician appointments that we cancel with less than 24 hours notice are compensated separately."
+  },
+  {
+    "document_id": "POL-007",
+    "title": "Business Broadband SLA",
+    "category": "policies",
+    "subcategory": "sla",
+    "version": "2026.1",
+    "section": "business_sla",
+    "content": "Business broadband customers receive a guaranteed fix time of eight working hours for line faults, 24 hours a day on Business Premium plans. If the guaranteed fix time is missed, a service credit of 25 percent of the monthly price is applied for each additional eight hours, up to the full monthly price.\n\nBusiness customers report faults through the business support line or the business portal, which requires MFA."
+  },
+  {
+    "document_id": "SVC-001",
+    "title": "Technician Visits",
+    "category": "service",
+    "subcategory": "technician",
+    "version": "2026.1",
+    "section": "technician_visits",
+    "content": "A technician visit is booked when remote tests confirm a fault that cannot be fixed remotely, such as a red LOS light that persists after an ONT restart with no area outage. Visits are offered in morning (08:00-13:00) and afternoon (13:00-18:00) slots.\n\nStandard visits are booked within two working days. Priority P2 customers, including registered remote workers, are offered a visit within one working day. An adult must be present at the property. If the fault is caused by customer damage or customer-owned equipment, a call-out charge applies."
+  },
+  {
+    "document_id": "SVC-002",
+    "title": "Support Priority Levels",
+    "category": "service",
+    "subcategory": "priority",
+    "version": "2026.1",
+    "section": "priority_levels",
+    "content": "Every fault ticket is given a priority level. P1 is used for customers with a registered medical dependency on their connection and for business customers with a guaranteed fix time. P2 is used for registered remote workers and for faults causing total loss of service. P3 is used for partial problems such as slow speeds or Wi-Fi coverage issues.\n\nThe priority level determines the target response time and how quickly a technician visit is offered. Priority is recorded on the ticket and cannot be changed without team leader approval."
+  },
+  {
+    "document_id": "SVC-003",
+    "title": "Estimated Restoration Times",
+    "category": "service",
+    "subcategory": "restoration",
+    "version": "2026.1",
+    "section": "restoration_times",
+    "content": "An estimated restoration time (ETR) is set on every confirmed outage and line fault ticket. For area outages, the ETR is set by the network operations center and typically ranges from 4 to 12 hours for equipment faults and 24 to 72 hours for cable damage requiring excavation.\n\nAgents must quote the ETR shown on the ticket and must not promise an earlier time. When the ETR changes, affected customers receive an SMS update."
+  },
+  {
+    "document_id": "SVC-004",
+    "title": "Ticket Escalation Procedure",
+    "category": "service",
+    "subcategory": "escalation",
+    "version": "2026.1",
+    "section": "ticket_escalation",
+    "content": "Escalate a fault ticket to the second-line technical team when first-line troubleshooting has been completed without resolving the issue, when a line fault ticket has missed its target time, or when the fault reappears within 14 days of being fixed.\n\nThe escalation note must include the router and ONT light status, the results of any remote line test, the troubleshooting steps already completed, and the customer's priority level. Escalated tickets receive an update within four working hours."
+  },
+  {
+    "document_id": "SVC-005",
+    "title": "Support Hours and Contact Channels",
+    "category": "service",
+    "subcategory": "support_hours",
+    "version": "2026.1",
+    "section": "support_hours",
+    "content": "Technical support for broadband faults is available by phone and chat 24 hours a day, 7 days a week. Billing and account support is available from 08:00 to 20:00 Monday to Saturday.\n\nThe business support line is available 24 hours a day for Business Premium customers and from 07:00 to 22:00 for other business plans. The service status tool and customer app are available at all times."
+  },
+  {
+    "document_id": "SVC-006",
+    "title": "Tracking a Support Ticket",
+    "category": "service",
+    "subcategory": "tickets",
+    "version": "2026.1",
+    "section": "ticket_tracking",
+    "content": "Every fault or complaint receives a ticket number by SMS and email. Customers can track the ticket status, booked appointments, and the estimated restoration time in the Support section of the customer app.\n\nTickets are closed automatically 72 hours after a fix is confirmed, unless the customer reports that the problem has returned."
+  }
+]

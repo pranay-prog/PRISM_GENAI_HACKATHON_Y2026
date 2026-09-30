@@ -1,0 +1,119 @@
+[
+  {
+    "document_id": "ACC-001",
+    "title": "Customer Account Access",
+    "category": "account",
+    "subcategory": "access",
+    "version": "2026.1",
+    "section": "account_access",
+    "content": "Customers sign in to the customer app and online account using their email address and password. The online account is used to view bills, change plans, check outage status, track support tickets, and manage payment methods.\n\nIf a customer cannot sign in, check whether the account is locked, whether they are using the email address registered on the account, and whether multi-factor authentication is failing. Agents must complete account verification before discussing account details or making changes."
+  },
+  {
+    "document_id": "ACC-002",
+    "title": "Password Reset",
+    "category": "account",
+    "subcategory": "password",
+    "version": "2026.1",
+    "section": "password_reset",
+    "content": "Customers can reset their password by selecting Forgot password on the sign-in page. A reset link is sent to the registered email address and expires after 30 minutes. The new password must be at least 12 characters and must not match any of the last five passwords.\n\nIf the reset email does not arrive within ten minutes, ask the customer to check their spam folder. Agents cannot see or set customer passwords; they can only resend the reset link after verifying the customer."
+  },
+  {
+    "document_id": "ACC-003",
+    "title": "Multi-Factor Authentication for the Customer Account",
+    "category": "account",
+    "subcategory": "mfa",
+    "version": "2026.1",
+    "section": "customer_mfa",
+    "content": "Multi-factor authentication (MFA) is required for the online account. After entering their password, customers confirm their identity with a six-digit code from an authenticator app or a code sent by SMS to the registered mobile number.\n\nIf a customer has lost access to their authenticator app or mobile number, an agent can reset MFA after full account verification. The customer then sets up MFA again at the next sign-in."
+  },
+  {
+    "document_id": "ACC-004",
+    "title": "MFA Error Codes",
+    "category": "account",
+    "subcategory": "mfa",
+    "version": "2026.2",
+    "section": "mfa_errors",
+    "content": "MFA-401 (invalid or expired code): the code was entered after it expired or the device clock is out of sync. Ask the user to enable automatic date and time on their phone and use a fresh code. Codes from authenticator apps are valid for 30 seconds.\n\nMFA-403 (device not registered): the sign-in attempt came from a device or authenticator that is not registered to the account. The user must register the new device, or an administrator must re-enrol the user's MFA method.\n\nMFA-429 (too many attempts): after five failed codes the account is temporarily locked for 15 minutes. Ask the user to wait 15 minutes before trying again. Repeated MFA-429 errors on business accounts should be escalated to the security team."
+  },
+  {
+    "document_id": "ACC-005",
+    "title": "Account Verification",
+    "category": "account",
+    "subcategory": "verification",
+    "version": "2026.1",
+    "section": "verification",
+    "content": "Before discussing account details, agents must verify the caller. Verification requires the account number or registered email address, plus two of the following: date of birth, the last four digits of the payment card, the amount of the last bill, or a one-time code sent to the registered mobile number.\n\nOnly the account holder or an authorised user listed on the account can make changes. If verification fails three times, end the account discussion and advise the customer to use the online account."
+  },
+  {
+    "document_id": "ACC-006",
+    "title": "Locked Accounts",
+    "category": "account",
+    "subcategory": "access",
+    "version": "2026.1",
+    "section": "locked_account",
+    "content": "An online account is locked after ten failed password attempts. The lock is removed automatically after 60 minutes, or immediately when the customer completes a password reset.\n\nAccounts locked for suspected fraud cannot be unlocked by frontline agents and must be transferred to the fraud team."
+  },
+  {
+    "document_id": "PLN-001",
+    "title": "Plan Activation",
+    "category": "plans",
+    "subcategory": "activation",
+    "version": "2026.1",
+    "section": "activation",
+    "content": "A new fiber plan is activated on the installation date. If no installation is needed because the property already has an active ONT, activation happens within four hours of the scheduled start date. The customer receives an SMS when the service is live.\n\nIf the service is not working 24 hours after the activation SMS, open an activation fault ticket. Billing starts on the activation date, not on the order date."
+  },
+  {
+    "document_id": "PLN-002",
+    "title": "Changing Your Plan",
+    "category": "plans",
+    "subcategory": "plan_change",
+    "version": "2026.1",
+    "section": "plan_change",
+    "content": "Customers can change their plan in the online account or by contacting support. Plan changes take effect from the next day, and the bill is adjusted pro rata for the rest of the billing cycle.\n\nChanging plans does not restart the minimum contract term unless the customer moves to a plan with a new promotional price."
+  },
+  {
+    "document_id": "PLN-003",
+    "title": "Upgrades and Downgrades",
+    "category": "plans",
+    "subcategory": "plan_change",
+    "version": "2026.1",
+    "section": "upgrade_downgrade",
+    "content": "Upgrading to a faster plan is available at any time and usually takes effect within two hours without a technician visit. Downgrading is allowed at any time after the first six months of the contract; downgrades earlier than that incur a fee equal to the price difference for the remaining minimum term.\n\nIf a customer asks to upgrade because of slow speeds, run a wired speed test first. Upgrading does not fix Wi-Fi coverage problems."
+  },
+  {
+    "document_id": "PLN-004",
+    "title": "Billing Cycle and Invoices",
+    "category": "plans",
+    "subcategory": "billing",
+    "version": "2026.1",
+    "section": "billing_cycle",
+    "content": "Bills are issued monthly on the same date as the activation date and are paid in advance for the following month. Invoices are available in the online account for 24 months.\n\nService credits, including outage compensation, appear as a separate line on the next bill after the credit is approved. Pro rata charges for plan changes appear on the bill for the cycle in which the change took effect."
+  },
+  {
+    "document_id": "PLN-005",
+    "title": "Payment Methods and Failed Payments",
+    "category": "plans",
+    "subcategory": "billing",
+    "version": "2026.1",
+    "section": "payments",
+    "content": "Accepted payment methods are direct debit, debit card, and credit card. If a payment fails, the customer is notified by email and the payment is retried after five days.\n\nIf a bill remains unpaid 21 days after the due date, the service may be restricted to reduced speed. Services are never disconnected while a billing dispute is open."
+  },
+  {
+    "document_id": "PLN-006",
+    "title": "Cancellation",
+    "category": "plans",
+    "subcategory": "cancellation",
+    "version": "2026.1",
+    "section": "cancellation",
+    "content": "Customers must give 30 days notice to cancel. Cancelling during the minimum contract term incurs an early termination charge equal to the remaining monthly charges, less any costs the company no longer has to pay.\n\nCustomers may cancel without an early termination charge if the service has had repeated faults that were not fixed within the SLA, or if the company increases prices above the rate stated in the contract. The router must be returned within 30 days of cancellation using the prepaid bag."
+  },
+  {
+    "document_id": "PLN-007",
+    "title": "Moving House",
+    "category": "plans",
+    "subcategory": "home_move",
+    "version": "2026.1",
+    "section": "home_move",
+    "content": "Customers moving house should tell us at least 14 days before the move date. If fiber is available at the new address, the service is moved without a new minimum term. An installation visit may be required if the new property does not have an active ONT.\n\nIf fiber is not available at the new address, the customer can cancel without an early termination charge."
+  }
+]

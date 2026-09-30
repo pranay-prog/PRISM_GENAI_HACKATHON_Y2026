@@ -1,0 +1,4 @@
+mode,mean_query_ms,queries,reranked_hit@5,reranked_mrr@5,reranked_recall@3,retriever_hit@5,retriever_mrr@5,retriever_recall@3
+dense,0.8,28,0.8929,0.7494,0.7321,0.8571,0.7512,0.7857
+bm25,1.19,28,0.8929,0.7494,0.7143,0.8571,0.753,0.7679
+hybrid,1.7,28,0.8929,0.7494,0.7143,0.8571,0.7738,0.8036

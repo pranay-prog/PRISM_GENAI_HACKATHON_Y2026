@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+frontend/dist/
+backend/corpus/processed/
+data/sessions/*
+data/telemetry/*
+data/benchmark/*
+!data/**/.gitkeep
+.env

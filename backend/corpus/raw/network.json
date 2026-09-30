@@ -1,0 +1,146 @@
+[
+  {
+    "document_id": "NET-001",
+    "title": "Internet Not Working: First Checks",
+    "category": "network",
+    "subcategory": "broadband",
+    "version": "2026.1",
+    "section": "first_checks",
+    "content": "When a customer reports that their internet is not working, first establish the scope of the failure. Ask whether every device in the home has lost internet or only one device, and whether the failure affects Wi-Fi, wired Ethernet, or both. A failure on every device usually points to the broadband line, the fiber terminal (ONT), or a network outage rather than to a single phone or laptop.\n\nNext, check the status lights on the router and the ONT. The light pattern identifies which part of the connection has failed and determines the next troubleshooting step. A red LOS light, an unlit PON light, or an orange Internet light each have a dedicated procedure.\n\nBefore any reboot, check the outage status page or the service status tool in the customer app for the customer's area. If a confirmed area outage exists, do not ask the customer to reset equipment; log the customer against the outage ticket and provide the estimated restoration time."
+  },
+  {
+    "document_id": "NET-002",
+    "title": "Checking Service Outage Status",
+    "category": "network",
+    "subcategory": "outage",
+    "version": "2026.1",
+    "section": "outage_status",
+    "content": "Customers can check whether there is a known outage in their area using the service status tool in the customer app or on the support website by entering their postcode or account number. The tool shows confirmed outages, the affected services (fiber broadband, voice, TV), and the current estimated restoration time.\n\nAgents must check the network operations dashboard before starting device troubleshooting. If the customer's address is inside a confirmed outage zone, link the customer to the master outage ticket instead of opening a new fault ticket. Linking the customer ensures they receive restoration notifications by SMS and that any compensation for the outage is applied automatically.\n\nIf no outage is listed but several customers on the same street report a failure within one hour, raise a suspected outage to the network operations center using the escalation form."
+  },
+  {
+    "document_id": "NET-003",
+    "title": "Planned Maintenance Windows",
+    "category": "network",
+    "subcategory": "outage",
+    "version": "2026.1",
+    "section": "planned_maintenance",
+    "content": "Planned network maintenance is normally carried out between 00:00 and 06:00 local time. Customers in affected areas are notified by email or SMS at least 48 hours before the work begins. During maintenance, broadband service may be interrupted for up to four hours.\n\nService interruptions that occur inside a notified maintenance window are not treated as faults and are not eligible for outage compensation. If service has not returned one hour after the notified window ends, the interruption is treated as an unplanned outage and normal fault handling applies."
+  },
+  {
+    "document_id": "NET-004",
+    "title": "Router and ONT Status Light Reference",
+    "category": "network",
+    "subcategory": "router_lights",
+    "version": "2026.2",
+    "section": "status_lights",
+    "content": "Power light: solid green means the device is powered on; off means no power, so check the adapter and wall socket. PON light on the ONT: solid green means the fiber link is registered; blinking green means the ONT is still registering with the network, which can take up to three minutes after a reboot.\n\nLOS light: off is normal. A red or blinking red LOS light means Loss of Signal, which indicates that the ONT is not receiving any optical signal from the fiber network. While LOS is red, no device in the home can reach the internet over Wi-Fi or Ethernet.\n\nInternet light on the router: solid green means the router has an internet session; orange means the router has a local connection but could not authenticate or obtain an address. Wi-Fi light: solid or blinking green means the wireless network is broadcasting; off means Wi-Fi has been disabled, usually by the Wi-Fi button on the side of the router."
+  },
+  {
+    "document_id": "NET-005",
+    "title": "Slow Speed Troubleshooting",
+    "category": "network",
+    "subcategory": "speed",
+    "version": "2026.1",
+    "section": "slow_speed",
+    "content": "Slow speeds are most often caused by Wi-Fi limitations rather than by the broadband line. To separate the two, run a speed test on a computer connected to the router with an Ethernet cable. If the wired result is close to the plan speed, the line is healthy and the issue is local Wi-Fi coverage or congestion.\n\nIf wired speeds are below 50 percent of the plan speed on three tests taken at different times of day, restart the router and ONT and test again. Persistent low wired speeds should be reported as a line performance fault, which requires a remote line test before any technician visit is booked.\n\nBackground downloads, cloud backups, and streaming on other devices reduce available bandwidth. Ask the customer to pause these activities during testing."
+  },
+  {
+    "document_id": "NET-006",
+    "title": "Speed Test Guidance",
+    "category": "network",
+    "subcategory": "speed",
+    "version": "2026.1",
+    "section": "speed_test",
+    "content": "Use the official speed test in the customer app for any speed complaint, because it records results against the account and can be reviewed by the network team. Third-party speed test results are accepted as supporting evidence but are not used for service credit decisions.\n\nFor an accurate result, connect one computer by Ethernet, close other applications, and disconnect other devices from Wi-Fi. Wi-Fi test results on phones vary with distance, walls, and interference, and are not used to assess line performance."
+  },
+  {
+    "document_id": "NET-007",
+    "title": "Intermittent Connectivity and Dropouts",
+    "category": "network",
+    "subcategory": "intermittent",
+    "version": "2026.1",
+    "section": "intermittent",
+    "content": "Intermittent connectivity means the connection works but drops for short periods. Ask the customer how often the connection drops, how long each drop lasts, and whether the router lights change during a drop. If the LOS light turns red during the drops, the problem is on the fiber line; if the lights stay green, the problem is more likely Wi-Fi or a device.\n\nThe router event log, available remotely to agents, records every loss of the internet session. More than five session drops in 24 hours with a stable Wi-Fi environment should be escalated to a line fault. Loose fiber patch leads and damaged cables are common causes of drops, so ask the customer to check that the green fiber connector is firmly clicked into the ONT."
+  },
+  {
+    "document_id": "NET-008",
+    "title": "DNS Resolution Problems",
+    "category": "network",
+    "subcategory": "dns",
+    "version": "2026.1",
+    "section": "dns",
+    "content": "A DNS problem looks like an internet failure in which some websites fail to load while apps that use direct connections continue to work, or where the browser reports that the server address could not be found. The router lights are normal because the line itself is working.\n\nAsk the customer to restart the router, which refreshes the DNS settings it hands out to devices. If the customer has manually configured custom DNS servers on a device, ask them to switch the device back to automatic DNS. Clearing the browser cache and flushing the device DNS cache also resolve most cases. If DNS failures affect all devices after a restart, report a DNS platform issue to network operations."
+  },
+  {
+    "document_id": "NET-009",
+    "title": "Wi-Fi Troubleshooting Basics",
+    "category": "network",
+    "subcategory": "wifi",
+    "version": "2026.2",
+    "section": "wifi_basics",
+    "content": "If a phone, tablet, or laptop cannot connect to Wi-Fi, confirm that the Wi-Fi light on the router is on and that the device is trying to join the correct network name (SSID). The default network name and password are printed on the label on the back of the router.\n\nAsk the customer to turn Wi-Fi off and on again on the device, then forget the network and reconnect by entering the password again. Restarting the device clears most wireless connection errors. If one device fails while others connect normally, the fault is with that device's Wi-Fi settings rather than the router.\n\nIf no device can connect to Wi-Fi but a computer connected by Ethernet can reach the internet, restart the router. If the Wi-Fi light stays off after a restart, press the Wi-Fi button on the side of the router for two seconds to turn wireless back on."
+  },
+  {
+    "document_id": "NET-010",
+    "title": "Wi-Fi Failures When Mobile Data Still Works",
+    "category": "network",
+    "subcategory": "wifi",
+    "version": "2026.1",
+    "section": "wifi_vs_mobile_data",
+    "content": "Customers often report that the internet works on their phone using mobile data but not over Wi-Fi. Mobile data uses the cellular network, which is completely independent of the home broadband line. A working mobile data connection therefore does not show that the home broadband is healthy, and it does not rule out a fiber fault.\n\nWhen mobile data works but Wi-Fi does not, check the router and ONT lights first. If the LOS light is red, the home broadband line has lost signal and Wi-Fi will show as connected with no internet on every device; follow the LOS procedure. If all lights are normal, the problem is limited to the local Wi-Fi network; follow the Wi-Fi troubleshooting basics.\n\nCustomers can keep working over mobile data or a phone hotspot while the broadband fault is being fixed."
+  },
+  {
+    "document_id": "NET-011",
+    "title": "Choosing Between 2.4 GHz and 5 GHz Wi-Fi",
+    "category": "network",
+    "subcategory": "wifi",
+    "version": "2026.1",
+    "section": "wifi_bands",
+    "content": "Our routers broadcast on both 2.4 GHz and 5 GHz bands under one network name by default, and devices choose a band automatically. The 2.4 GHz band reaches further and passes through walls better but is slower and more prone to interference. The 5 GHz band is faster but has a shorter range.\n\nSome older smart home devices only support 2.4 GHz. If such a device cannot connect, the customer can split the bands into two network names from the router settings page so the device can join the 2.4 GHz network directly."
+  },
+  {
+    "document_id": "NET-012",
+    "title": "Wi-Fi Interference and Router Placement",
+    "category": "network",
+    "subcategory": "wifi",
+    "version": "2026.1",
+    "section": "wifi_placement",
+    "content": "Router placement has a large effect on Wi-Fi coverage. Place the router in a central, raised, open position, away from thick walls, metal cabinets, microwaves, cordless phone bases, and aquariums. Routers placed on the floor or inside a cupboard lose a significant part of their range.\n\nIn apartment buildings, neighbouring networks cause channel congestion. The router selects channels automatically at startup, so a restart can move it to a less congested channel. For homes where coverage remains weak in some rooms, a mesh Wi-Fi extender is recommended."
+  },
+  {
+    "document_id": "NET-013",
+    "title": "How Your Fiber Connection Works",
+    "category": "network",
+    "subcategory": "fiber",
+    "version": "2026.1",
+    "section": "fiber_overview",
+    "content": "A fiber broadband connection runs from the street cabinet to a small wall-mounted box inside the home called the optical network terminal (ONT). The ONT converts the light signal on the fiber into an Ethernet signal, which is passed to the router by a network cable. The router then provides Wi-Fi and wired connections to devices in the home.\n\nThe fiber cable that enters the ONT is thin and fragile. It must not be bent sharply, pinched by furniture, or disconnected by the customer except when instructed during troubleshooting. Damage to the fiber cable interrupts the optical signal and causes the LOS light to turn red."
+  },
+  {
+    "document_id": "NET-014",
+    "title": "Fiber LOS Indicator Troubleshooting",
+    "category": "network",
+    "subcategory": "fiber",
+    "version": "2026.1",
+    "section": "red_los",
+    "content": "A red LOS (Loss of Signal) light on the ONT means the terminal is not receiving an optical signal from the fiber network. This is a line-level fault: the router and devices in the home cannot fix it, and a router factory reset will not resolve a red LOS light.\n\nFirst check the outage status for the customer's area, because an area outage is the most common cause of a red LOS light. If there is no area outage, ask the customer to check that the green fiber connector is firmly clicked into the ONT and that the fiber cable is not bent, pinched, or damaged. The customer must never look directly into the fiber connector or the port, because the laser light can damage eyesight.\n\nThen power off the ONT for 30 seconds and power it back on. Wait three minutes for the PON light to register. If the LOS light remains red after the restart and there is no area outage, open a line fault ticket and book a technician visit, because the fault is on the fiber line or in the street cabinet."
+  },
+  {
+    "document_id": "NET-015",
+    "title": "Damaged Fiber Cables",
+    "category": "network",
+    "subcategory": "fiber",
+    "version": "2026.1",
+    "section": "fiber_damage",
+    "content": "Signs of a damaged fiber cable include a visible kink or crush mark, a cable that has been cut during building work, or a connector that has been pulled out of the ONT. Any of these causes a red LOS light.\n\nCustomers must not attempt to repair or splice a fiber cable. Damaged internal fiber is repaired by a technician. Where the damage was caused by the customer or by third-party building work, a repair charge may apply, and the resulting downtime is not eligible for outage compensation."
+  },
+  {
+    "document_id": "NET-016",
+    "title": "Area Outage Handling Procedure",
+    "category": "network",
+    "subcategory": "outage",
+    "version": "2026.2",
+    "section": "outage_procedure",
+    "content": "When the network operations center confirms an area outage, a master outage ticket is created and the affected area appears on the service status tool within 15 minutes. Customers who contact support are linked to the master ticket and receive SMS updates whenever the estimated restoration time changes.\n\nAgents should not book individual technician visits for customers inside a confirmed outage zone, because the repair is carried out on shared network equipment. After the outage is resolved, customers should restart their ONT and router if service does not return within 30 minutes. Outage duration is recorded automatically from the master ticket and is used to calculate any compensation."
+  }
+]
